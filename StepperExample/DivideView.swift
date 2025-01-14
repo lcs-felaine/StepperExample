@@ -20,6 +20,10 @@ struct DividedView: View {
         return base / basea
     }
     
+    var remainder: Int {
+           return base % basea
+       }
+    
     var body: some View {
         VStack {
             
@@ -62,6 +66,12 @@ struct DividedView: View {
                 
                 Text("\(quotient)")
                     .font(.system(size: 96))
+                
+                HStack {
+                                   Spacer()
+                                   Text("Remainder: \(remainder)")
+                                       .font(.system(size: 27))
+                               }
                 
                
             }
